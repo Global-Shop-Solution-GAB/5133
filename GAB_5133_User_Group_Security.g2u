@@ -1,0 +1,1429 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmSec..Create(BaseForm)
+Gui.frmSec..Size(14850,11175)
+Gui.frmSec..MinX(0)
+Gui.frmSec..MinY(0)
+Gui.frmSec..Position(0,0)
+Gui.frmSec..BackColor(-2147483633)
+Gui.frmSec..MousePointer(0)
+Gui.frmSec..Event(UnLoad,frmSec_UnLoad)
+Gui.frmSec..Caption("User and Group Security Review by Menu Item")
+Gui.frmSec..AlwaysOnTop(False)
+Gui.frmSec..FontName("Tahoma")
+Gui.frmSec..FontSize(8.25)
+Gui.frmSec..ControlBox(True)
+Gui.frmSec..MaxButton(True)
+Gui.frmSec..MinButton(True)
+Gui.frmSec..Moveable(True)
+Gui.frmSec..Sizeable(True)
+Gui.frmSec..ShowInTaskBar(True)
+Gui.frmSec..TitleBar(True)
+Gui.frmSec.GsGCSec.Create(GsGridControl)
+Gui.frmSec.GsGCSec.Size(14670,9495)
+Gui.frmSec.GsGCSec.Position(30,1350)
+Gui.frmSec.GsGCSec.Anchor(15)
+Gui.frmSec.GsGCSec.Enabled(True)
+Gui.frmSec.GsGCSec.Visible(True)
+Gui.frmSec.GsGCSec.Zorder(0)
+Gui.frmSec.ddlView.Create(DropDownList)
+Gui.frmSec.ddlView.Size(2910,300)
+Gui.frmSec.ddlView.Position(30,975)
+Gui.frmSec.ddlView.Enabled(True)
+Gui.frmSec.ddlView.Visible(True)
+Gui.frmSec.ddlView.Zorder(0)
+Gui.frmSec.ddlView.FontName("Tahoma")
+Gui.frmSec.ddlView.FontSize(8.25)
+Gui.frmSec.ddlView.Event(SelectedIndexChanged,ddlView_SelectedIndexChanged)
+Gui.frmSec.cmdAdminTools.Create(Button)
+Gui.frmSec.cmdAdminTools.Visible(False)
+Gui.frmSec.cmdAdminTools.Size(1410,375)
+Gui.frmSec.cmdAdminTools.Position(13290,930)
+Gui.frmSec.cmdAdminTools.Caption("Admin Tools")
+Gui.frmSec.cmdAdminTools.Event(Click,cmdAdminTools_Click)
+Gui.frmSec.cmdAdminTools.Anchor(9)
+Gui.frmSec.cmdAdminTools.Enabled(True)
+Gui.frmSec.cmdAdminTools.Zorder(0)
+Gui.frmSec.cmdAdminTools.FontName("Tahoma")
+Gui.frmSec.cmdAdminTools.FontSize(8.25)
+Gui.frmSec.picGSSLogo.Create(PictureBox)
+Gui.frmSec.picGSSLogo.Size(4125,960)
+Gui.frmSec.picGSSLogo.Position(5520,45)
+Gui.frmSec.picGSSLogo.Event(DblClick,picGSSLogo_DblClick)
+Gui.frmSec.picGSSLogo.ToolTip("Double-Click for additional functions")
+Gui.frmSec.picGSSLogo.Anchor(1)
+Gui.frmSec.picGSSLogo.Enabled(True)
+Gui.frmSec.picGSSLogo.Visible(True)
+Gui.frmSec.picGSSLogo.Zorder(0)
+Gui.frmSec.lblStatus.Create(Label,"Loading Security....",False,2010,255,0,2985,1065,True,0,"Arial",10,-2147483633,0,0)
+Gui.frmSec.lblStatus.BorderStyle(0)
+Gui.frmAdmin..Create(BaseForm)
+Gui.frmAdmin..Caption("Admin Tools")
+Gui.frmAdmin..Size(5460,6255)
+Gui.frmAdmin..MinX(5460)
+Gui.frmAdmin..MinY(6255)
+Gui.frmAdmin..Position(0,0)
+Gui.frmAdmin..BackColor(-2147483633)
+Gui.frmAdmin..MaxButton(False)
+Gui.frmAdmin..MousePointer(0)
+Gui.frmAdmin..Sizeable(False)
+Gui.frmAdmin..Event(UnLoad,frmAdmin_UnLoad)
+Gui.frmAdmin..AlwaysOnTop(False)
+Gui.frmAdmin..FontName("Tahoma")
+Gui.frmAdmin..FontSize(8.25)
+Gui.frmAdmin..ControlBox(True)
+Gui.frmAdmin..MinButton(True)
+Gui.frmAdmin..Moveable(True)
+Gui.frmAdmin..ShowInTaskBar(True)
+Gui.frmAdmin..TitleBar(True)
+Gui.frmAdmin.ddlCopy.Create(DropDownList)
+Gui.frmAdmin.ddlCopy.Size(3135,330)
+Gui.frmAdmin.ddlCopy.Position(30,30)
+Gui.frmAdmin.ddlCopy.Event(Change,ddlCopy_Change)
+Gui.frmAdmin.ddlCopy.Enabled(True)
+Gui.frmAdmin.ddlCopy.Visible(True)
+Gui.frmAdmin.ddlCopy.Zorder(0)
+Gui.frmAdmin.ddlCopy.FontName("Tahoma")
+Gui.frmAdmin.ddlCopy.FontSize(8.25)
+Gui.frmAdmin.GsGCCopy.Create(GsGridControl)
+Gui.frmAdmin.GsGCCopy.Size(5265,4785)
+Gui.frmAdmin.GsGCCopy.Position(30,765)
+Gui.frmAdmin.GsGCCopy.Anchor(15)
+Gui.frmAdmin.GsGCCopy.Enabled(True)
+Gui.frmAdmin.GsGCCopy.Visible(True)
+Gui.frmAdmin.GsGCCopy.Zorder(0)
+Gui.frmAdmin.ddlUserGroup.Create(DropDownList)
+Gui.frmAdmin.ddlUserGroup.Size(3135,330)
+Gui.frmAdmin.ddlUserGroup.Position(30,390)
+Gui.frmAdmin.ddlUserGroup.Enabled(True)
+Gui.frmAdmin.ddlUserGroup.Visible(True)
+Gui.frmAdmin.ddlUserGroup.Zorder(0)
+Gui.frmAdmin.ddlUserGroup.FontName("Tahoma")
+Gui.frmAdmin.ddlUserGroup.FontSize(8.25)
+Gui.frmAdmin.cmdCopy.Create(Button)
+Gui.frmAdmin.cmdCopy.Size(855,375)
+Gui.frmAdmin.cmdCopy.Position(4440,5565)
+Gui.frmAdmin.cmdCopy.Caption("Copy")
+Gui.frmAdmin.cmdCopy.Event(Click,cmdCopy_Click)
+Gui.frmAdmin.cmdCopy.Anchor(10)
+Gui.frmAdmin.cmdCopy.Enabled(True)
+Gui.frmAdmin.cmdCopy.Visible(True)
+Gui.frmAdmin.cmdCopy.Zorder(0)
+Gui.frmAdmin.cmdCopy.FontName("Tahoma")
+Gui.frmAdmin.cmdCopy.FontSize(8.25)
+Gui.frmAdmin.lblCopyFrom.Create(Label,"Copy from CCC to:",True,1920,270,0,3375,510,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmAdmin.lblCopyFrom.BorderStyle(0)
+Gui.frmAdmin.lblStatus.Create(Label,"Label",False,3315,255,0,30,5625,True,0,"Arial",8,-2147483633,0,0)
+Gui.frmAdmin.lblStatus.BorderStyle(0)
+Gui.frmAdmin.cmdSecCleanup.Create(Button)
+Gui.frmAdmin.cmdSecCleanup.Size(1545,375)
+Gui.frmAdmin.cmdSecCleanup.Position(3750,30)
+Gui.frmAdmin.cmdSecCleanup.Caption("Security Cleanup")
+Gui.frmAdmin.cmdSecCleanup.Event(Click,cmdSecCleanup_Click)
+Gui.frmAdmin.cmdSecCleanup.Enabled(True)
+Gui.frmAdmin.cmdSecCleanup.Visible(True)
+Gui.frmAdmin.cmdSecCleanup.Zorder(0)
+Gui.frmAdmin.cmdSecCleanup.FontName("Tahoma")
+Gui.frmAdmin.cmdSecCleanup.FontSize(8.25)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	V.Global.bLoadData.Declare()
+	V.Global.bHasBeenRefreshed.Declare()
+	V.Global.sCommonDbName.Declare()
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		F.ODBC.Connection!con.OpenCompanyConnection(50000)
+		F.ODBC.Connection!common.OpenCommonConnection(50000)
+		
+		V.Local.sIcon.Declare
+		V.Local.sGssLogo.Declare
+		V.Local.sSQL.Declare
+		V.Local.sTemp1.Declare()
+		V.Local.sTemp2.Declare()
+	
+		F.Intrinsic.String.Build("{0}\ART\gss2.ico",V.Caller.GlobalDir,v.Local.sIcon)
+		F.Intrinsic.String.Build("{0}\ART\GAB_GSS_Logo_Green_Dash.png",V.Caller.GlobalDir,V.Local.sGssLogo)
+		Gui.frmSec..Icon(V.Local.sIcon)
+		Gui.frmAdmin..Icon(V.Local.sIcon)
+		Gui.frmSec.picGSSLogo.Picture(V.Local.sGssLogo)
+		
+		'Load Dropdown List Values
+		F.Intrinsic.Control.BlockEvents
+		Gui.frmSec.ddlView.AddItem("Tree View (Similar to GSS Menu)",0)
+		Gui.frmSec.ddlView.AddItem("Full Menu Path View",1)
+		Gui.frmSec.ddlView.Text("Tree View (Similar to GSS Menu)")
+		F.Intrinsic.Control.CallSub(SetView)
+		
+		'Create Dropdown DataTables
+		F.Intrinsic.String.Build("Select RTRIM(User_ID) As User_ID,Gs_User From User_Information Where Enabled = 1 And Company = '{0}' Or Enabled = 1 And Company_Specific = 0 Order By Gs_User;",V.Caller.CompanyCode,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtUsers","common",V.Local.sSQL,True)
+		F.Intrinsic.String.Build("Select RTRIM(Group_ID) As Group_ID,Gs_Group From User_Groups Where Enabled = 1 And Company = '{0}' Order By Gs_Group;",V.Caller.CompanyCode,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtGroups","common",V.Local.sSQL,True)
+		
+		Gui.frmAdmin.ddlCopy.AddItem("Copy User",0)
+		Gui.frmAdmin.ddlCopy.AddItem("Copy Group",1)
+		Gui.frmAdmin.ddlCopy.Text("Copy User")
+		F.Intrinsic.Control.UnBlockEvents
+		
+		'Check Admin Access
+		F.Intrinsic.Control.CallSub(CheckAdmin)
+		F.Intrinsic.Control.CallSub(AdminContextMenu,"Admin",V.Args.Admin)
+		
+		Gui.frmSec..Show
+		
+		F.Intrinsic.Control.CallSub(SetCopyDDL)
+		F.Intrinsic.Control.CallSub(ddlCopy_Change)
+	
+		' V.Ambient.CCon is something like "driver={Pervasive ODBC Client Interface};DBQ=COMMON36E;SERVERNAME=gss2k19bugscur2"
+		' We need that "COMMON36E" part.
+		' Needed for queries in LoadSecurityDT, SecCleanUpDeletes
+		F.Intrinsic.String.Split(V.Ambient.CCon, ";", V.Local.sTemp1)
+		F.Intrinsic.String.Split(V.Local.sTemp1(1), "=", V.Local.sTemp2)
+		V.Global.sCommonDbName.Set(V.Local.sTemp2(1))
+		F.Intrinsic.Control.CallSub(LoadSecurityDT)
+		V.Global.bHasBeenRefreshed.Set(True)
+
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.Main.End
+
+Program.Sub.frmSec_UnLoad.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		F.Intrinsic.Control.If(V.Global.bLoadData)
+			F.Intrinsic.Control.CallSub(Serialize)
+		F.Intrinsic.Control.EndIf
+		
+		F.ODBC.Connection!common.Close
+		F.ODBC.Connection!con.Close
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.frmSec_UnLoad.End
+
+Program.Sub.CheckAdmin.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		V.Local.bUser.Declare
+		V.Local.bGroup.Declare
+	
+		F.Intrinsic.Variable.AddRV("Admin",False)
+		F.Global.Security.CheckUserAccessIPM(740,0,V.Local.bUser)
+		F.Global.Security.CheckUserAccessIPM(741,0,V.Local.bGroup)
+		F.Intrinsic.Control.If(V.Local.bUser,=,True,OR,V.Local.bGroup,=,True)
+			Gui.frmSec.cmdAdminTools.Visible(True)
+			F.Intrinsic.Variable.AddRV("Admin",True)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.CheckAdmin.End
+
+Program.Sub.AdminContextMenu.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		Gui.frmSec..ContextMenuCreate("ctxSec")
+		Gui.frmSec.GsGCSec.ContextMenuAttach("ctxSec")
+		Gui.frmSec..ContextMenuAddItem("ctxSec","Refresh",0,"Refresh")
+		Gui.frmSec..ContextMenuAddItem("ctxSec","Export",0,"Export")
+		GUI.frmSec..ContextMenuAddItem("ctxSec", "ResetColumns", 0, "Reset Columns")
+		Gui.frmSec..ContextMenuSetItemEventHandler("ctxSec","Refresh","MenuClick")
+		Gui.frmSec..ContextMenuSetItemEventHandler("ctxSec","Export","MenuClick")
+		GUI.frmSec..ContextMenuSetItemEventHandler("ctxSec", "ResetColumns", "MenuClick")
+		
+		F.Intrinsic.Control.If(V.Args.Admin)
+			Gui.frmSec..ContextMenuAddItem("ctxSec","AddUser",0,"Add User to Menu Item")
+			Gui.frmSec..ContextMenuAddItem("ctxSec","RemoveUser",0,"Remove User from Menu Item")
+			Gui.frmSec..ContextMenuAddItem("ctxSec","AddGroup",0,"Add User to Security Group")
+			Gui.frmSec..ContextMenuAddItem("ctxSec","RemoveGroup",0,"Remove User from Security Group")
+			Gui.frmSec..ContextMenuSetItemEventHandler("ctxSec","AddUser","MenuClick")
+			Gui.frmSec..ContextMenuSetItemEventHandler("ctxSec","RemoveUser","MenuClick")
+			Gui.frmSec..ContextMenuSetItemEventHandler("ctxSec","AddGroup","MenuClick")
+			Gui.frmSec..ContextMenuSetItemEventHandler("ctxSec","RemoveGroup","MenuClick")
+		F.Intrinsic.Control.EndIf
+		
+		Gui.frmAdmin..ContextMenuCreate("ctxAdmin")
+		Gui.frmAdmin.GsGCCopy.ContextMenuAttach("ctxAdmin")
+		Gui.frmAdmin..ContextMenuAddItem("ctxAdmin","SelAll",0,"Select All")
+		Gui.frmAdmin..ContextMenuAddItem("ctxAdmin","DeselAll",0,"Deselect All")
+		Gui.frmAdmin..ContextMenuSetItemEventHandler("ctxAdmin","SelAll","MenuClickAdmin")
+		Gui.frmAdmin..ContextMenuSetItemEventHandler("ctxAdmin","DeselAll","MenuClickAdmin")
+		
+		Gui.frmAdmin..ContextMenuCreate("ctxBackups")
+		Gui.frmAdmin.cmdSecCleanup.ContextMenuAttach("ctxBackups")
+		Gui.frmAdmin..ContextMenuAddItem("ctxBackups","ViewBackups",0,"View Backups")
+		Gui.frmAdmin..ContextMenuSetItemEventHandler("ctxBackups","ViewBackups","OpenViewBackups")
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.AdminContextMenu.End
+
+Program.Sub.MenuClick.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		V.Local.sFileExport.Declare
+		V.Local.bExcel.Declare
+		V.Local.bFileLocked.Declare
+		V.Local.sMsg.Declare
+		V.Local.sControl.Declare
+		V.Local.iRow.Declare
+		V.Local.sType.Declare
+		V.Local.iMid.Declare
+		V.Local.sGroup.Declare
+		V.Local.sRet.Declare
+		V.Local.iUserID.Declare
+		V.Local.iGroupID.Declare
+		V.Local.sSQL.Declare
+		V.Local.iSequence.Declare
+		V.Local.iSecurityID.Declare
+		V.Local.sUser.Declare
+		V.Local.sName.Declare
+	
+		F.Intrinsic.Control.SelectCase(V.Args.ItemName)
+			F.Intrinsic.Control.Case("REFRESH")
+				F.Intrinsic.Control.CallSub(LoadSecurityDT)
+				V.Global.bHasBeenRefreshed.Set(True)
+			
+			F.Intrinsic.Control.Case("EXPORT")
+				F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+				F.Intrinsic.Control.If(V.Local.bExcel)
+					F.Intrinsic.String.Build("{0}\GAB_5133_{1}_Export.xlsx",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sFileExport)
+					F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+					F.Intrinsic.Control.If(V.Local.bFileLocked)
+						F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+						F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+					F.Intrinsic.Control.Else
+						Gui.frmSec.GsGCSec.Export(V.Local.sFileExport,"xlsx")
+						F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0}\GAB_5133_{1}_Export.csv",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sFileExport)
+					F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+					F.Intrinsic.Control.If(V.Local.bFileLocked)
+						F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+						F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+					F.Intrinsic.Control.Else
+						Gui.frmSec.GsGCSec.Export(V.Local.sFileExport,"csv")
+					F.Intrinsic.Control.EndIf
+					F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+				F.Intrinsic.Control.EndIf
+				
+			F.Intrinsic.Control.Case("RESETCOLUMNS")
+				F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode, "gvSec", 5513, 1000, False, "Serialize", False ,0, -999.0, 1/1/1980, 12:00:00 AM, "")
+				V.Global.bLoadData.Set(False)
+				F.Intrinsic.Control.CallSub(LoadSecurityDT)
+				V.Global.bHasBeenRefreshed.Set(True)
+				
+			F.Intrinsic.Control.Case("ADDUSER")
+				' Since this depends on GetSelectedRows(), it needs to check if data has actually been loaded to prevent errors.
+				F.Intrinsic.Control.If(V.Global.bHasBeenRefreshed.Not)
+					F.Intrinsic.Control.ExitSub()
+				F.Intrinsic.Control.EndIf
+
+				Gui.frmSec.GsGCSec.GetSelectedRows("gvSec",V.Local.iRow)
+				V.Local.iSecurityID.Set(V.DataTable.dtSec(V.Local.iRow).Security_ID!FieldVal)
+				V.Local.sType.Set(V.DataTable.dtSec(V.Local.iRow).Type!FieldVal)
+				F.Intrinsic.Control.If(V.Local.sType.Left4,=,"USER")
+					F.Intrinsic.UI.Browser(10,"",V.Local.sRet)
+					F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+						
+						V.Local.bShouldAddRow.Declare()
+						V.Local.bShouldAddRow.Set(False)
+						
+						' New var with new name just for clarity.
+						V.Local.iSelectedSecurityId.Declare()
+						V.Local.iSelectedSecurityId.Set(V.Local.iSecurityID)
+						
+						F.Intrinsic.String.Split(V.Local.sRet, "*!*", V.Local.sRet)
+						V.Local.iUserID.Set(V.Local.sRet(0).Long)
+						V.Local.sUser.Set(V.Local.sRet(1).Trim)
+						F.Intrinsic.String.Build("{0} {1}", V.Local.sRet(3), V.Local.sRet(4), V.Local.sName)
+						V.Local.sName.Set(V.Local.sName.Trim)
+						
+						V.Local.iHighestSecurityId.Declare()
+						F.ODBC.Connection!con.ExecuteAndReturn("SELECT TOP 1 security_id FROM menu_security ORDER BY security_id DESC;", V.Local.iHighestSecurityId)
+						
+						V.Local.iNewSecurityIdForMenuItem.Declare()
+						F.Intrinsic.Math.Add(V.Local.iHighestSecurityId, 1, V.Local.iNewSecurityIdForMenuItem)
+						
+						V.Local.iNewSecurityIdForMenuHeader.Declare()
+						F.Intrinsic.Math.Add(V.Local.iNewSecurityIdForMenuItem, 1, V.Local.iNewSecurityIdForMenuHeader)
+						
+						V.Local.iNewSecuirtyIdForMenuModule.Declare()
+						F.Intrinsic.Math.Add(V.Local.iNewSecurityIdForMenuHeader, 1, V.Local.iNewSecuirtyIdForMenuModule)
+						
+						' Check for the related menu item permission for the selected user.
+						'	If it does not exist, then add a new record.
+						'	If it exists, then make sure Enabled=True.
+						V.Local.iItemId.Declare()
+						V.Local.iItemId.Set(V.DataTable.dtSec(V.Local.iRow).Selection_ID!FieldVal)
+						F.Intrinsic.String.Build("SELECT * FROM menu_security WHERE level_type = 2 AND level_id = {0} AND access_id = {1};", V.Local.iItemId, V.Local.iUserID, V.Local.sSQL)
+						F.Data.DataTable.CreateFromSQL("dtTemp", "con", V.Local.sSQL)
+						F.Intrinsic.Control.If(V.DataTable.dtTemp.RowCount, =, 0)
+							F.Intrinsic.String.Build("SELECT * FROM menu_security WHERE security_id = {0};", V.Local.iSelectedSecurityId, V.Local.sSQL)
+							F.Data.DataTable.CreateFromSQL("dtUserSecSave", "con", V.Local.sSQL, True)
+							F.Data.DataTable.SetValue("dtUserSecSave", -1, "security_id", V.Local.iNewSecurityIdForMenuItem, "access_id", V.Local.iUserID)
+							F.Data.DataTable.SaveToDB("dtUserSecSave", "con", "menu_security", "security_id")
+							
+							' For menu items that are nested ones like Module > Header > MenuItem > NestedMenuItem
+							'	(Ex. Inventory > File > Inventory Parts > New),
+							'	we need to save multiple records. 1 for the NextedMenuItem done above (Level_Seq<>0). 1 for the MenuItem (Level_Seq=0).
+							'	If this was a "regular" menu item, then the save above was already dont for the Level_Seq=0 record.
+							F.Intrinsic.Control.If(V.DataTable.dtUserSecSave(0).Level_Seq!FieldVal, <>, 0)
+							
+								' Increment the security IDs so that the other saves work as expected.
+								F.Intrinsic.Math.Add(V.Local.iNewSecurityIdForMenuItem, 1, V.Local.iNewSecurityIdForMenuItem)
+								F.Intrinsic.Math.Add(V.Local.iNewSecurityIdForMenuHeader, 1, V.Local.iNewSecurityIdForMenuHeader)
+								F.Intrinsic.Math.Add(V.Local.iNewSecuirtyIdForMenuModule, 1, V.Local.iNewSecuirtyIdForMenuModule)
+								
+								' Re-use the same saving DT since most of those record values are needed again anyways.
+								F.Data.DataTable.SetValue("dtUserSecSave", -1, "security_id", V.Local.iNewSecurityIdForMenuItem, "access_id", V.Local.iUserID, "level_seq", 0)
+								F.Data.DataTable.SaveToDB("dtUserSecSave", "con", "menu_security", "security_id")
+								
+							F.Intrinsic.Control.EndIf
+							
+							F.Data.DataTable.Close("dtUserSecSave")
+							V.Local.bShouldAddRow.Set(True)
+						F.Intrinsic.Control.Else
+							F.Intrinsic.Control.If(V.DataTable.dtTemp(0).Enabled!FieldVal, =, False)
+								V.Local.bShouldAddRow.Set(True)
+							F.Intrinsic.Control.EndIf
+							F.Data.DataTable.SetValue("dtTemp", -1, "enabled", "True")
+							F.Data.DataTable.SaveToDB("dtTemp", "con", "menu_security", "security_id")
+							' If the menu item permission somehow already exists, then there is a chance that they were using a previous version of 5133.
+							'	If they were, then they could be a situation where the menu item permission exists, but header and module ones do not.
+							'	And in that case, they would need to continue to get those added.
+							'	And to make that possible, the menu item security ID needs to be the correct one for the SaveToDB logic to work.
+							V.Local.iNewSecurityIdForMenuItem.Set(V.DataTable.dtTemp(0).Security_ID!FieldVal)
+						F.Intrinsic.Control.EndIf
+						F.Data.DataTable.Close("dtTemp")
+						
+						' Check for the related menu item's menu header permission for the selected user.
+						'	If it does not exist, then add a new record.
+						'	If it exists, then make sure Enabled=True.
+						V.Local.iHeaderId.Declare()
+						V.Local.iHeaderId.Set(V.DataTable.dtSec(V.Local.iRow).Header_ID!FieldVal)
+						F.Intrinsic.String.Build("SELECT * FROM menu_security WHERE level_type = 1 AND level_id = {0} AND access_id = {1};", V.Local.iHeaderId, V.Local.iUserID, V.Local.sSQL)
+						F.Data.DataTable.CreateFromSQL("dtTemp", "con", V.Local.sSQL)
+						F.Intrinsic.Control.If(V.DataTable.dtTemp.RowCount, =, 0)
+							F.Intrinsic.String.Build("SELECT * FROM menu_security WHERE security_id = {0};", V.Local.iNewSecurityIdForMenuItem, V.Local.sSQL)
+							F.Data.DataTable.CreateFromSQL("dtUserSecSave", "con", V.Local.sSQL, True)
+							F.Data.DataTable.SetValue("dtUserSecSave", -1, "security_id", V.Local.iNewSecurityIdForMenuHeader, "level_type", 1, "level_id", V.Local.iHeaderId, "level_seq", 0)
+							F.Data.DataTable.SaveToDB("dtUserSecSave", "con", "menu_security", "security_id")
+							F.Data.DataTable.Close("dtUserSecSave")
+						F.Intrinsic.Control.Else
+							F.Data.DataTable.SetValue("dtTemp", -1, "enabled", "True")
+							F.Data.DataTable.SaveToDB("dtTemp", "con", "menu_security", "security_id")
+						F.Intrinsic.Control.EndIf
+						F.Data.DataTable.Close("dtTemp")
+						
+						' Check for the related menu item's menu module permission for the selected user.
+						' 	If it does not exist, then add a new record.
+						' 	If it exists, then make sure Enabled=True.
+						V.Local.iModuleId.Declare()
+						V.Local.iModuleId.Set(V.DataTable.dtSec(V.Local.iRow).Module_ID!FieldVal)
+						F.Intrinsic.String.Build("SELECT * FROM menu_security WHERE level_type = 0 AND level_id = {0} AND access_id = {1};", V.Local.iModuleId, V.Local.iUserID, V.Local.sSQL)
+						F.Data.DataTable.CreateFromSQL("dtTemp", "con", V.Local.sSQL)
+						F.Intrinsic.Control.If(V.DataTable.dtTemp.RowCount, =, 0)
+							F.Intrinsic.String.Build("SELECT * FROM menu_security WHERE security_id = {0};", V.Local.iNewSecurityIdForMenuItem, V.Local.sSQL)
+							F.Data.DataTable.CreateFromSQL("dtUserSecSave", "con", V.Local.sSQL, True)
+							F.Data.DataTable.SetValue("dtUserSecSave", -1, "security_id", V.Local.iNewSecuirtyIdForMenuModule, "level_type", 0, "level_id", V.Local.iModuleId, "level_seq", 0)
+							F.Data.DataTable.SaveToDB("dtUserSecSave", "con", "menu_security", "security_id")
+							F.Data.DataTable.Close("dtUserSecSave")
+						F.Intrinsic.Control.Else
+							F.Data.DataTable.SetValue("dtTemp", -1, "enabled", "True")
+							F.Data.DataTable.SaveToDB("dtTemp", "con", "menu_security", "security_id")
+						F.Intrinsic.Control.EndIf
+						F.Data.DataTable.Close("dtTemp")
+						
+						'Add Row to Security Table, no refresh needed
+						F.Intrinsic.Control.If(V.Local.bShouldAddRow, =, True)
+							F.Intrinsic.Control.If(V.Screen.frmSec!ddlView.Value,=,"Tree View (Similar to GSS Menu)")
+								F.Data.DataTable.AddRow("dtSec","Module_Title",V.DataTable.dtSec(V.Local.iRow).Module_Title!FieldVal,"Header_Title",V.DataTable.dtSec(V.Local.iRow).Header_Title!FieldVal,"Title",V.DataTable.dtSec(V.Local.iRow).Title!FieldVal,"User",V.Local.sUser,"Name",V.Local.sName,"Type","USER","Access_ID",V.Local.iUserID,"Security_ID",V.Local.iSecurityID)
+							F.Intrinsic.Control.Else
+								F.Data.DataTable.AddRow("dtSec","Menu_Path",V.DataTable.dtSec(V.Local.iRow).Menu_Path!FieldVal,"User",V.Local.sUser,"Name",V.Local.sName,"Type","USER","Access_ID",V.Local.iUserID,"Security_ID",V.Local.iSecurityID)
+							F.Intrinsic.Control.EndIf
+						F.Intrinsic.Control.EndIf
+
+					F.Intrinsic.Control.EndIf
+					
+				F.Intrinsic.Control.Else
+				
+					F.Intrinsic.UI.Msgbox("Select a record where the Type is USER.","Type Check")
+					F.Intrinsic.Control.ExitSub
+					
+				F.Intrinsic.Control.EndIf
+			
+			F.Intrinsic.Control.Case("REMOVEUSER")
+				' Since this depends on GetSelectedRows(), it needs to check if data has actually been loaded to prevent errors.
+				F.Intrinsic.Control.If(V.Global.bHasBeenRefreshed.Not)
+					F.Intrinsic.Control.ExitSub()
+				F.Intrinsic.Control.EndIf
+			
+				Gui.frmSec.GsGCSec.GetSelectedRows("gvSec",V.Local.iRow)
+				V.Local.iSecurityID.Set(V.DataTable.dtSec(V.Local.iRow).Security_ID!FieldVal)
+				V.Local.sType.Set(V.DataTable.dtSec(V.Local.iRow).Type!FieldVal)
+				F.Intrinsic.Control.If(V.Local.sType.Left4,=,"USER")
+					F.Intrinsic.String.Build("Delete From Menu_Security Where Security_ID = {0};",V.Local.iSecurityID,V.Local.sSQL)
+					F.ODBC.Connection!con.Execute(V.Local.sSQL)
+					'Remove Row from Security, no refresh needed
+					F.Data.DataTable.DeleteRow("dtSec",V.Local.iRow)
+					F.Data.DataTable.AcceptChanges("dtSec")
+				F.Intrinsic.Control.Else
+					F.Intrinsic.UI.Msgbox("Select a record where the Type is USER.","Type Check")
+					F.Intrinsic.Control.ExitSub
+				F.Intrinsic.Control.EndIf
+				
+			F.Intrinsic.Control.Case("ADDGROUP")
+				' Since this depends on GetSelectedRows(), it needs to check if data has actually been loaded to prevent errors.
+				F.Intrinsic.Control.If(V.Global.bHasBeenRefreshed.Not)
+					F.Intrinsic.Control.ExitSub()
+				F.Intrinsic.Control.EndIf
+			
+				Gui.frmSec.GsGCSec.GetSelectedRows("gvSec",V.Local.iRow)
+				V.Local.sType.Set(V.DataTable.dtSec(V.Local.iRow).Type!FieldVal)
+				F.Intrinsic.Control.If(V.Local.sType.Left5,=,"GROUP")
+					F.Intrinsic.Math.Sub(V.Local.sType.Length,6,V.Local.iMid)
+					F.Intrinsic.String.Mid(V.Local.sType,7,V.Local.iMid,V.Local.sGroup)
+					F.Intrinsic.String.Replace(V.Local.sGroup,"(","",V.Local.sGroup)
+					F.Intrinsic.String.Replace(V.Local.sGroup,")","",V.Local.sGroup)
+					F.Intrinsic.String.Build("Select Group_ID From User_Groups Where Gs_Group = '{0}' And Company = '{1}';",V.Local.sGroup,V.Caller.CompanyCode,V.Local.sSQL)
+					F.ODBC.Connection!common.ExecuteAndReturn(V.Local.sSQL,V.Local.iGroupID)
+					F.Intrinsic.UI.Browser(10,"",V.Local.sRet)
+					F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+						F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+						V.Local.iUserID.Set(V.Local.sRet(0).Long)
+						'F.Intrinsic.String.Build("Select Top 1 * From Menu_Security_Assoc Where User_ID = {0} And Company = '{1}' Order By Sequence Desc;",V.Local.iUserID,V.Caller.CompanyCode,V.Local.sSQL)
+						F.Intrinsic.String.Build("Select Top 1 * From Menu_Security_Assoc Where Group_ID = {0} And Company = '{1}' Order By Sequence Desc;",V.Local.iGroupID,V.Caller.CompanyCode,V.Local.sSQL)
+						F.Data.DataTable.CreateFromSQL("dtGroupSecSave","common",V.Local.sSQL,True)
+						V.Local.iSequence.Set(V.DataTable.dtGroupSecSave(0).Sequence!FieldVal)
+						'F.Data.DataTable.SetValue("dtGroupSecSave",-1,"Group_ID",V.Local.iGroupID,"Sequence",V.Local.iSequence.++)
+						F.Data.DataTable.SetValue("dtGroupSecSave",-1,"User_ID",V.Local.iUserID,"Sequence",V.Local.iSequence.++)
+						F.Data.DataTable.SaveToDB("dtGroupSecSave","common","Menu_Security_Assoc","User_ID*!*Group_ID*!*Company")
+						F.Data.DataTable.Close("dtGroupSecSave")
+						F.Intrinsic.UI.Msgbox("Refresh dashboard to see new permissions.","Group Permissions Added")
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Else
+					F.Intrinsic.UI.Msgbox("Select a record where the Type is GROUP.","Type Check")
+					F.Intrinsic.Control.ExitSub
+				F.Intrinsic.Control.EndIf
+				
+			F.Intrinsic.Control.Case("REMOVEGROUP")
+				' Since this depends on GetSelectedRows(), it needs to check if data has actually been loaded to prevent errors.
+				F.Intrinsic.Control.If(V.Global.bHasBeenRefreshed.Not)
+					F.Intrinsic.Control.ExitSub()
+				F.Intrinsic.Control.EndIf
+			
+				Gui.frmSec.GsGCSec.GetSelectedRows("gvSec",V.Local.iRow)
+				V.Local.iUserID.Set(V.DataTable.dtSec(V.Local.iRow).Access_ID!FieldVal)
+				V.Local.sType.Set(V.DataTable.dtSec(V.Local.iRow).Type!FieldVal)
+				F.Intrinsic.Control.If(V.Local.sType.Left5,=,"GROUP")
+					F.Intrinsic.Math.Sub(V.Local.sType.Length,6,V.Local.iMid)
+					F.Intrinsic.String.Mid(V.Local.sType,7,V.Local.iMid,V.Local.sGroup)
+					F.Intrinsic.String.Replace(V.Local.sGroup,"(","",V.Local.sGroup)
+					F.Intrinsic.String.Replace(V.Local.sGroup,")","",V.Local.sGroup)
+					F.Intrinsic.String.Build("Select Group_ID From User_Groups Where Gs_Group = '{0}' And Company = '{1}';",V.Local.sGroup,V.Caller.CompanyCode,V.Local.sSQL)
+					F.ODBC.Connection!common.ExecuteAndReturn(V.Local.sSQL,V.Local.iGroupID)
+					F.Intrinsic.String.Build("Delete From Menu_Security_Assoc Where User_ID = {0} And Group_ID = {1} And Company = '{2}';",V.Local.iUserID,V.Local.iGroupID,V.Caller.CompanyCode,V.Local.sSQL)
+					F.ODBC.Connection!common.Execute(V.Local.sSQL)
+					F.Intrinsic.UI.Msgbox("Refresh dashboard to see new permissions.","Group Permissions Removed")
+				F.Intrinsic.Control.Else
+					F.Intrinsic.UI.Msgbox("Select a record where the Type is GROUP.","Type Check")
+					F.Intrinsic.Control.ExitSub
+				F.Intrinsic.Control.EndIf
+				
+		F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.CatchWhen(5700)
+	
+		F.Intrinsic.UI.Msgbox("Please load data.","Export Error")
+		
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.MenuClick.End
+
+Program.Sub.MenuClickAdmin.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		F.Intrinsic.Control.SelectCase(V.Args.ItemName)
+			F.Intrinsic.Control.Case("SELALL")
+				F.Data.DataTable.SetValue("dtCoCodes",-1,"Sel",True)
+			F.Intrinsic.Control.Case("DESELALL")
+				F.Data.DataTable.SetValue("dtCoCodes",-1,"Sel",False)
+		F.Intrinsic.Control.EndSelect
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.MenuClickAdmin.End
+
+Program.Sub.picGSSLogo_DblClick.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		F.Intrinsic.Task.ShellExec(0,"Open","http://www.globalshopsolutions.com/login-customer","","",0)
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.picGSSLogo_DblClick.End
+
+Program.Sub.SetView.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.sText.Declare
+		
+		F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5133,1000,5,"",V.Local.sText)
+		Gui.frmSec.ddlView.Text(V.Local.sText)
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.SetView.End
+
+Program.Sub.LoadSecurityDT.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		V.Local.sSQL.Declare
+		
+		F.Intrinsic.Control.If(V.Global.bLoadData)
+			F.Intrinsic.Control.CallSub(Serialize)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.DataTable.dtSec.Exists)
+			F.Data.DataTable.Close("dtSec")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.DataTable.dtGlobalA.Exists)
+			F.Data.DataTable.Close("dtGlobalA")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.DataTable.dtGlobalB.Exists)
+			F.Data.DataTable.Close("dtGlobalB")
+		F.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.If(v.DataTable.dtGlobalB1.Exists)
+			f.Data.Datatable.Close("dtGlobalB1")
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.If(v.DataTable.dtGlobalB2.Exists)
+			f.Data.Datatable.Close("dtGlobalB2")
+		f.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.DataTable.dt1.Exists)
+			F.Data.DataTable.Close("dt1")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.DataTable.dt2.Exists)
+			F.Data.DataTable.Close("dt2")
+		F.Intrinsic.Control.EndIf
+				
+		
+		V.Global.bLoadData.Set(True)
+		
+		Gui.frmSec.lblStatus.Visible(True)
+		
+		F.Intrinsic.Control.If(V.Screen.frmSec!ddlView.Value,=,"Tree View (Similar to GSS Menu)")
+			'This segment executes after the union in the original query. 
+			 v.Local.sSQL.Set("SELECT Distinct A.MODULE_TITLE,B.HEADER_TITLE,CASE WHEN D.TITLE IS NULL THEN C.TITLE ELSE C.TITLE+' > '+D.TITLE END AS TITLE, A.module_id, B.header_id, C.selection_id, C.Selection_ID As CSELECTION_ID,D.SElECTION_ID As DSelection_ID,D.Title As DTitle, C.Sequence as CSequence, D.Sequence as DSequence FROM MENU_MODULE A JOIN MENU_HEADERS B ON A.MODULE_ID = B.MODULE_ID JOIN MENU_SELECTIONS C ON B.HEADER_ID = C.HEADER_ID AND C.SEQUENCE = 0 LEFT JOIN MENU_SELECTIONS D ON (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID = 0) OR (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID <> 0)")
+			f.Data.Datatable.createfromsql("dtGlobalA", "con", v.Local.sSQL, true)
+			
+			
+			'This is the segment accessing the common db in the original query after the union.
+			f.Intrinsic.control.CallSub(MenuSecurityDTGenerate)
+
+			'This is the query before the union in the original
+			v.Local.sSQL.Set("SELECT Distinct A.MODULE_TITLE,B.HEADER_TITLE,CASE WHEN D.TITLE IS NULL THEN C.TITLE ELSE C.TITLE+' > '+D.TITLE END AS TITLE,E.ACCESS_ID,RTrim('USER') AS TYPE,E.SECURITY_ID, A.module_id, B.header_id, C.selection_id FROM MENU_MODULE A JOIN MENU_HEADERS B ON A.MODULE_ID = B.MODULE_ID JOIN MENU_SELECTIONS C ON B.HEADER_ID = C.HEADER_ID AND C.SEQUENCE = 0 LEFT JOIN MENU_SELECTIONS D ON (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID = 0) OR (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID <> 0) JOIN MENU_SECURITY E ON (C.SELECTION_ID = E.LEVEL_ID AND C.SEQUENCE = E.LEVEL_SEQ AND E.ENABLED = 1 AND E.LEVEL_TYPE = 2 AND D.TITLE IS NULL) OR (D.SELECTION_ID = E.LEVEL_ID AND D.SEQUENCE = E.LEVEL_SEQ AND E.ENABLED = 1 AND E.LEVEL_TYPE = 2);")
+			f.Data.Datatable.CreateFromSQL("dtSec", "con", v.Local.sSQL, true)
+			
+			'create a filtered dataview because linq.join filter doesn't
+			f.Data.DataView.Create("dtGlobalA","dvGlobalAFilter",22,"[DTitle] Is Null","")
+			
+			f.Data.Linq.Join("InnerJoin", "dataview", "dtGlobalA","dvGlobalAFilter*!*C", "datatable", "dtGlobalB*!*E", "C.CSELECTION_ID = E.LEVEL_ID AND C.CSEQUENCE = E.LEVEL_SEQ","C.Module_Title*!*C.Header_Title*!*C.Title*!*E.Access_ID*!*E.Type*!*E.Security_ID*!*C.Module_ID*!*C.Header_ID*!*C.Selection_ID", "", "", "","dt1", True)
+			
+			f.Data.Linq.Join("InnerJoin", "datatable", "dtGlobalA*!*C", "datatable", "dtGlobalB*!*E", "C.DSELECTION_ID = E.LEVEL_ID AND C.DSEQUENCE = E.LEVEL_SEQ","C.Module_Title*!*C.Header_Title*!*C.Title*!*E.Access_ID*!*E.Type*!*E.Security_ID*!*C.Module_ID*!*C.Header_ID*!*C.Selection_ID", "", "", "","dt2", True)
+												
+
+			
+			
+		f.Intrinsic.Control.Else
+			
+			v.Local.sSQL.Set("SELECT Distinct CASE WHEN D.TITLE IS NULL THEN A.MODULE_TITLE+' > '+B.HEADER_TITLE+' > '+C.TITLE ELSE A.MODULE_TITLE+' > '+B.HEADER_TITLE+' > '+C.TITLE+' > '+D.TITLE END AS MENU_PATH, A.module_id, B.header_id, C.selection_id, C.Selection_ID As CSELECTION_ID,D.SElECTION_ID As DSelection_ID,D.Title As DTitle, C.Sequence as CSequence, D.Sequence as DSequence FROM MENU_MODULE A JOIN MENU_HEADERS B ON A.MODULE_ID = B.MODULE_ID JOIN MENU_SELECTIONS C ON B.HEADER_ID = C.HEADER_ID AND C.SEQUENCE = 0 LEFT JOIN MENU_SELECTIONS D ON (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID = 0) OR (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID <> 0)")
+			f.Data.Datatable.createfromsql("dtGlobalA", "con", v.Local.sSQL, true)
+			
+			'This is the segment accessing the common db in the original query after the union.
+			f.Intrinsic.Control.CallSub(MenuSecurityDTGenerate)
+							
+			v.Local.sSQL.Set("SELECT Distinct CASE WHEN D.TITLE IS NULL THEN A.MODULE_TITLE+' > '+B.HEADER_TITLE+' > '+C.TITLE ELSE A.MODULE_TITLE+' > '+B.HEADER_TITLE+' > '+C.TITLE+' > '+D.TITLE END AS MENU_PATH,E.ACCESS_ID,RTrim('USER') AS TYPE,E.SECURITY_ID, A.module_id, B.header_id, C.selection_id FROM MENU_MODULE A JOIN MENU_HEADERS B ON A.MODULE_ID = B.MODULE_ID JOIN MENU_SELECTIONS C ON B.HEADER_ID = C.HEADER_ID AND C.SEQUENCE = 0 LEFT JOIN MENU_SELECTIONS D ON (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID = 0) OR (C.HEADER_ID = D.HEADER_ID AND C.SELECTION_ID = D.SELECTION_ID AND D.SEQUENCE <> 0 AND D.SELECTION_ID < 100000 AND D.CHILDOFID <> 0) JOIN MENU_SECURITY E ON (C.SELECTION_ID = E.LEVEL_ID AND C.SEQUENCE = E.LEVEL_SEQ AND E.ENABLED = 1 AND E.LEVEL_TYPE = 2 AND D.TITLE IS NULL) OR (D.SELECTION_ID = E.LEVEL_ID AND D.SEQUENCE = E.LEVEL_SEQ AND E.ENABLED = 1 AND E.LEVEL_TYPE = 2)")
+			f.Data.Datatable.CreateFromSQL("dtSec", "con", v.Local.sSQL, true)
+			
+			
+			'create a filtered dataview because linq.join filter doesn't
+			f.Data.DataView.Create("dtGlobalA","dvGlobalAFilter",22,"[DTitle] Is Null","")
+			
+			f.Data.Linq.Join("InnerJoin", "dataview", "dtGlobalA","dvGlobalAFilter*!*C", "datatable", "dtGlobalB*!*E", "C.CSELECTION_ID = E.LEVEL_ID AND C.CSEQUENCE = E.LEVEL_SEQ","C.Menu_Path*!*E.Access_ID*!*E.Type*!*E.Security_ID*!*C.Module_ID*!*C.Header_ID*!*C.Selection_ID", "", "", "","dt1", True)
+			f.Data.Linq.Join("InnerJoin", "datatable", "dtGlobalA*!*C", "datatable", "dtGlobalB*!*E", "C.DSELECTION_ID = E.LEVEL_ID AND C.DSEQUENCE = E.LEVEL_SEQ","C.Menu_Path*!*E.Access_ID*!*E.Type*!*E.Security_ID*!*C.Module_ID*!*C.Header_ID*!*C.Selection_ID", "", "", "","dt2", True)		
+			
+		f.Intrinsic.Control.EndIf
+				
+		f.Data.Datatable.Merge("dt1", "dt2", True,2)			
+			
+		F.Data.DataTable.Merge("dt2","dtSec",true,2)
+		
+		F.Data.DataTable.AddColumn("dtSec","User",String)
+		F.Data.DataTable.AddColumn("dtSec","Name",String)
+		F.Data.DataTable.AddColumn("dtSec","Enabled",Boolean,False)
+		
+		'f.Data.Datatable.AddColumn("dtSec","CoCode",String)
+
+		
+		'Fill in User First and Last Names
+		F.Data.Dictionary.CreateFromSQL("dUser","common","Select User_ID,Gs_User As Gs_User From User_Information;")		
+		F.Data.Dictionary.CreateFromSQL("dName","common","Select User_ID,RTrim(First_Name+' '+Last_Name) As Name From User_Information;")
+		F.Data.Dictionary.CreateFromSQL("dCoCode","common","Select User_ID,COMPANY As CoCode From User_Information;")
+		F.Data.DataTable.FillFromDictionary("dtSec","dUser","Access_ID","User")
+		F.Data.DataTable.FillFromDictionary("dtSec","dName","Access_ID","Name")
+		'F.Data.DataTable.FillFromDictionary("dtSec","dCoCode","Access_ID","CoCode")
+		F.Data.Dictionary.Close("dUser")
+		F.Data.Dictionary.Close("dName")
+		F.Data.Dictionary.Close("dCoCode")
+		
+		'Flag Disabled Users
+		F.Data.Dictionary.CreateFromSQL("dDisabled","common","Select USER_ID, ENABLED From USER_INFORMATION Order By GS_USER;")
+		F.Data.DataTable.FillFromDictionary("dtSec","dDisabled","Access_ID","Enabled")
+		F.Data.Dictionary.SetDefaultReturn("dDisabled",False)
+		F.Data.Dictionary.Close("dDisabled")
+		
+		F.Data.DataView.Create("dtSec","dvSec",22,"User <> Name","")
+		Function.Intrinsic.Debug.Stop
+		
+		
+		F.Intrinsic.Control.CallSub(LoadSecurityGV)
+		
+		F.Intrinsic.Control.CallSub(Deserialize)
+		
+		Gui.frmSec.lblStatus.Visible(False)
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.LoadSecurityDT.End
+
+Program.Sub.MenuSecurityDTGenerate.Start
+
+	V.Local.sSQL.Declare
+	f.Intrinsic.String.Build("select msa.user_id as ACCESS_ID, ug.group_id, 'GROUP ('+ug.gs_group+')' as TYPE, ug.company from MENU_SECURITY_ASSOC MSA join user_groups UG on MSA.group_ID=UG.group_id and MSA.company=UG.company where ltrim(rtrim(UG.company))='{0}' order by ug.group_id, access_id", v.Caller.CompanyCode, v.Local.sSql)
+	f.Data.Datatable.CreateFromSQL("dtGlobalB1", "common", v.Local.sSQL, true)
+	
+	f.Intrinsic.String.Build("select ms.level_id, ms.company, ms.level_seq, ms.security_id, ms.level_type as Type, ms.access_id as AcsID from menu_Security ms where ms.level_type=2 and ms.enabled=1 and ltrim(rtrim(ms.company))='{0}' and ms.access_id<>0 order by ms.access_id, ms.level_id", v.Caller.CompanyCode, v.Local.sSQL)
+	f.Data.Datatable.CreateFromSQL("dtGlobalB2", "common", v.Local.sSQL, true)
+	
+	f.Data.Linq.Join("InnerJoin", "datatable", "dtGlobalB1*!*A", "datatable", "dtGlobalB2*!*B", "A.GROUP_ID = B.AcsID and A.COMPANY = B.COMPANY", "B.Level_ID*!*B.Level_Seq*!*A.Type*!*B.Company*!*A.Access_ID*!*B.Security_ID","", "", "","dtGlobalB", true)
+	
+Program.Sub.MenuSecurityDTGenerate.End
+
+Program.Sub.LoadSecurityGV.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		Gui.frmSec.GsGCSec.SuspendLayout()
+		Gui.frmSec.GsGCSec.AddGridviewFromDataview("gvSec","dtSec","dvSec")
+		Gui.frmSec.GsGCSec.SetGridViewProperty("gvSec","MultiSelect",True)
+		Gui.frmSec.GsGCSec.SetGridViewProperty("gvSec","Editable",False)
+		Gui.frmSec.GsGCSec.SetGridViewProperty("gvSec","AllowSort",True)
+		Gui.frmSec.GsGCSec.SetGridViewProperty("gvSec","AllowFilter",True)
+		Gui.frmSec.GsGCSec.SetGridViewProperty("gvSec","OptionsDetailShowDetailTabs",False)
+		Gui.frmSec.GsGCSec.SetGridViewProperty("gvSec","OptionsViewShowGroupPanel",True)
+	
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Access_ID","Visible",False)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Security_ID","Visible",False)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Enabled","Visible",False)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_ID","Visible",False)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_ID","Visible",False)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Selection_ID","Visible",False)
+		
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_ID","ShowInColumnChooser",False)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_ID","ShowInColumnChooser",False)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Selection_ID","ShowInColumnChooser",False)
+		
+		F.Intrinsic.Control.If(V.Screen.frmSec!ddlView.Value,=,"Tree View (Similar to GSS Menu)")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_Title","VisibleIndex","0")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_Title","VisibleIndex","1")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Title","VisibleIndex","2")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","User","VisibleIndex","3")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Name","VisibleIndex","4")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Type","VisibleIndex","5")
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_Title","Caption","Module")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_Title","Caption","Header")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Title","Caption","Title")
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_Title","MinWidth","85")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_Title","MinWidth","85")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Title","MinWidth","85")
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_Title","HeaderFontBold",True)
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_Title","HeaderFontBold",True)
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Title","HeaderFontBold",True)
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_Title","HeaderHAlignment","Center")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_Title","HeaderHAlignment","Center")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Title","HeaderHAlignment","Center")
+		
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_Title","CellHAlignment","Center")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_Title","CellHAlignment","Center")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Title","CellHAlignment","Center")
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Module_Title","GroupIndex","0")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Header_Title","GroupIndex","1")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Title","GroupIndex","2")
+		F.Intrinsic.Control.Else
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Menu_Path","VisibleIndex","0")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","User","VisibleIndex","1")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Name","VisibleIndex","2")
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Type","VisibleIndex","3")
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Menu_Path","Caption","Menu Path")
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Menu_Path","MinWidth","150")
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Menu_Path","HeaderFontBold",True)
+			
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Menu_Path","HeaderHAlignment","Center")
+		
+			Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Menu_Path","GroupIndex","0")
+		F.Intrinsic.Control.EndIf
+		
+		
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","User","Caption","User")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Name","Caption","Name")
+		'Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","CoCode","Caption","Company Code")		
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Type","Caption","Type")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Access_ID","Caption","Access ID")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Security_ID","Caption","Security ID")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Enabled","Caption","Enabled")
+		
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","User","MinWidth","85")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Name","MinWidth","85")
+		'Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","CoCode","MinWidth","85")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Type","MinWidth","85")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Access_ID","MinWidth","85")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Security_ID","MinWidth","85")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Enabled","MinWidth","85")
+			
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","User","HeaderFontBold",True)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Name","HeaderFontBold",True)
+		'Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","CoCode","HeaderFontBold",True)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Type","HeaderFontBold",True)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Access_ID","HeaderFontBold",True)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Security_ID","HeaderFontBold",True)
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Enabled","HeaderFontBold",True)
+		
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","User","HeaderHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Name","HeaderHAlignment","Center")
+		'Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","CoCode","HeaderHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Type","HeaderHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Access_ID","HeaderHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Security_ID","HeaderHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Enabled","HeaderHAlignment","Center")
+	
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","User","CellHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Name","CellHAlignment","Center")
+		'Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","CoCode","CellHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Type","CellHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Access_ID","CellHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Security_ID","CellHAlignment","Center")
+		Gui.frmSec.GsGCSec.SetColumnProperty("gvSec","Enabled","CellHAlignment","Center")
+		
+		Gui.frmSec.GsGCSec.AddStyleFormatCondition("gvSec","Enabled","Enabled","Equal",False)
+		Gui.frmSec.GsGCSec.SetStyleFormatConditionProperty("gvSec","Enabled","Enabled","BackColor","Pink")
+		Gui.frmSec.GsGCSec.SetStyleFormatConditionProperty("gvSec","Enabled","Enabled","ApplyToRow","True")
+		
+		Gui.frmSec.GsGCSec.ResumeLayout()
+		Gui.frmSec.GsGCSec.MainView("gvSec")
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.LoadSecurityGV.End
+
+Program.Sub.cmdAdminTools_Click.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		V.Local.sCaption.Declare
+		
+		F.Intrinsic.String.Build("Copy from {0} to:",V.Caller.CompanyCode,V.Local.sCaption)
+		Gui.frmAdmin.lblCopyFrom.Caption(V.Local.sCaption)
+		
+		F.Intrinsic.Control.CallSub(SetCopyDDL)
+		F.Intrinsic.Control.CallSub(PullCompanyCodes)
+		
+		Gui.frmAdmin..Show
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.cmdAdminTools_Click.End
+
+Program.Sub.frmAdmin_UnLoad.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		Gui.frmAdmin..Visible(False)
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.frmAdmin_UnLoad.End
+
+Program.Sub.SetCopyDDL.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.sText.Declare
+		
+		F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5133,2000,5,"",V.Local.sText)
+		Gui.frmAdmin.ddlCopy.Text(V.Local.sText)
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.SetCopyDDL.End
+
+Program.Sub.ddlCopy_Change.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5133,2000,False,V.Screen.frmAdmin!ddlCopy.Text,False,0,-999.0,1/1/1980,12:00:00 AM,"")
+		
+		Gui.frmAdmin.ddlUserGroup.ClearItems
+		F.Intrinsic.Control.If(V.Screen.frmAdmin!ddlCopy.Text,=,"Copy User")
+			Gui.frmAdmin.ddlUserGroup.AddItems("DataTable","dtUsers","User_ID","Gs_User")
+		F.Intrinsic.Control.Else
+			Gui.frmAdmin.ddlUserGroup.AddItems("DataTable","dtGroups","Group_ID","Gs_Group")
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.ddlCopy_Change.End
+
+Program.Sub.PullCompanyCodes.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.sSQL.Declare
+		
+		F.Intrinsic.Control.If(V.DataTable.dtCoCodes.Exists)
+			F.Data.DataTable.Close("dtCoCodes")
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.String.Build("Select Cast(0 As Bit) As Sel,CoCode,CompanyName From Companies Where CoCode <> '{0}';",V.Caller.CompanyCode,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtCoCodes","common",V.Local.sSQL,True)
+		
+		Gui.frmAdmin.GsGCCopy.AddGridviewFromDatatable("gvCoCodes","dtCoCodes")
+		Gui.frmAdmin.GsGCCopy.SuspendLayout()
+		Gui.frmAdmin.GsGCCopy.SetGridViewProperty("gvCoCodes","MultiSelect",True)
+		Gui.frmAdmin.GsGCCopy.SetGridViewProperty("gvCoCodes","AllowSort",True)
+		Gui.frmAdmin.GsGCCopy.SetGridViewProperty("gvCoCodes","AllowFilter",True)
+		Gui.frmAdmin.GsGCCopy.SetGridViewProperty("gvCoCodes","OptionsDetailShowDetailTabs",False)
+		Gui.frmAdmin.GsGCCopy.SetGridViewProperty("gvCoCodes","OptionsViewShowGroupPanel",False)
+	
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","Sel","Caption","Select")
+		'Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CoCode","Caption","Company Code")
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CompanyName","Caption","Company Name")
+		
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","Sel","MinWidth","45")
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CoCode","MinWidth","95")
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CompanyName","MinWidth","150")
+		
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","Sel","AllowEdit",True)
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CoCode","AllowEdit",False)
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CompanyName","AllowEdit",False)
+		
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","Sel","ReadOnly",False)
+			
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","Sel","HeaderFontBold",True)
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CoCode","HeaderFontBold",True)
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CompanyName","HeaderFontBold",True)
+		
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","Sel","HeaderHAlignment","Center")
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CoCode","HeaderHAlignment","Center")
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CompanyName","HeaderHAlignment","Center")
+	
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","Sel","CellHAlignment","Center")
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CoCode","CellHAlignment","Center")
+		Gui.frmAdmin.GsGCCopy.SetColumnProperty("gvCoCodes","CompanyName","CellHAlignment","Center")
+		
+		Gui.frmAdmin.GsGCCopy.ResumeLayout()
+		Gui.frmAdmin.GsGCCopy.MainView("gvCoCodes")
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.PullCompanyCodes.End
+
+Program.Sub.cmdCopy_Click.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		V.Local.sSQL.Declare
+		V.Local.iUserID.Declare
+		V.Local.iCnt.Declare
+		V.Local.sSelect.Declare
+		V.Local.iSecurityID.Declare
+		V.Local.iGroupID.Declare
+		
+		Gui.frmAdmin.lblStatus.Caption("Copying Permissions....")
+		Gui.frmAdmin.lblStatus.Visible(True)
+		
+		F.Intrinsic.Control.SelectCase(V.Screen.frmAdmin!ddlCopy.Value)
+			F.Intrinsic.Control.Case("Copy User")
+				F.Intrinsic.String.Build("Select User_ID From User_Information Where Gs_User = '{0}';",V.Screen.frmAdmin!ddlUserGroup.Value,V.Local.sSQL)
+				F.ODBC.Connection!common.ExecuteAndReturn(V.Local.sSQL,V.Local.iUserID)
+				
+				F.Intrinsic.String.Build("Select * From Menu_Security Where Access_ID = {0};",V.Local.iUserID,V.Local.sSQL)
+				F.Data.DataTable.CreateFromSQL("dtCopyUser","con",V.Local.sSQL,True)
+				
+				F.Data.DataTable.Select("dtCoCodes","Sel = True",V.Local.sSelect)
+				F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+					F.Intrinsic.String.Split(V.Local.sSelect,"*!*",V.Local.sSelect)
+					F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sSelect.UBound,1)
+						F.Intrinsic.String.Build("Select User_ID From User_Information Where Gs_User = '{0}' And Enabled = 1 And Company_Specific = 0 Or Gs_User = '{0}' And Enabled = 1 And Company = '{1}';",V.Screen.frmAdmin!ddlUserGroup.Value,V.DataTable.dtCoCodes(V.Local.sSelect(V.Local.iCnt)).CoCode!FieldVal,V.Local.sSQL)
+						F.ODBC.Connection!common.ExecuteAndReturn(V.Local.sSQL,V.Local.iUserID)
+						F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF,=,False)
+							F.Global.General.OverrideCompany(V.DataTable.dtCoCodes(V.Local.sSelect(V.Local.iCnt)).CoCode!FieldVal)
+							F.ODBC.Connection!conCoCode.OpenCompanyConnection(50000)
+							'Remove security from Copy To CoCode
+							F.Intrinsic.String.Build("Delete From Menu_Security Where Access_ID = {0};",V.Local.iUserID,V.Local.sSQL)
+							F.ODBC.Connection!conCoCode.Execute(V.Local.sSQL)
+							'Get Top ID From Menu_Sec
+							F.ODBC.Connection!conCoCode.ExecuteAndReturn("Select Top 1 Security_ID From Menu_Security Order By Security_ID Desc;",V.Local.iSecurityID)
+							'Set Vlaues for DataTable
+							F.Data.DataTable.SetSeries("dtCopyUser","Security_ID",V.Local.iSecurityID.++,1)
+							F.Data.DataTable.SaveToDB("dtCopyUser","conCoCode","MENU_SECURITY","Security_ID")
+							F.ODBC.Connection!conCoCode.Close
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.Next(V.Local.iCnt)
+				F.Intrinsic.Control.EndIf
+				F.Data.DataTable.Close("dtCopyUser")
+				
+			F.Intrinsic.Control.Case("Copy Group")
+				F.Intrinsic.String.Build("Select Group_ID From User_Groups Where Gs_Group = '{0}' And Company = '{1}';",V.Screen.frmAdmin!ddlUserGroup.Value,V.Caller.CompanyCode,V.Local.sSQL)
+				F.ODBC.Connection!common.ExecuteAndReturn(V.Local.sSQL,V.Local.iGroupID)
+				
+				F.Intrinsic.String.Build("Select * From Menu_Security Where Access_ID = {0} And Company = '{1}';",V.Local.iGroupID,V.Caller.CompanyCode,V.Local.sSQL)
+				F.Data.DataTable.CreateFromSQL("dtCopyGroup","common",V.Local.sSQL,True)
+				
+				F.Data.DataTable.Select("dtCoCodes","Sel = True",V.Local.sSelect)
+				F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+					F.Intrinsic.String.Split(V.Local.sSelect,"*!*",V.Local.sSelect)
+					F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sSelect.UBound,1)
+						'Remove Current Group
+						F.Intrinsic.String.Build("Delete From User_Groups Where Gs_Group = '{0}' And Company = '{1}';",V.Screen.frmAdmin!ddlUserGroup.Value,V.DataTable.dtCoCodes(V.Local.sSelect(V.Local.iCnt)).CoCode!FieldVal,V.Local.sSQL)
+						F.ODBC.Connection!common.Execute(V.Local.sSQL)
+						'Get Next Group_ID
+						F.ODBC.Connection!common.ExecuteAndReturn("Select Max(Group_ID) From User_Groups;",V.Local.iGroupID)
+						'Create New Group
+						F.Intrinsic.String.Build("Insert Into User_Groups Values({0},0,'{1}','{2}','',1);",V.Local.iGroupID.++,V.Screen.frmAdmin!ddlUserGroup.Value,V.DataTable.dtCoCodes(V.Local.sSelect(V.Local.iCnt)).CoCode!FieldVal,V.Local.sSQL)
+						F.ODBC.Connection!common.Execute(V.Local.sSQL)
+						'Remove security from Copy To CoCode
+						F.Intrinsic.String.Build("Delete From Menu_Security Where Access_ID = {0} And Company = '{1}';",V.Local.iGroupID,V.DataTable.dtCoCodes(V.Local.sSelect(V.Local.iCnt)).CoCode!FieldVal,V.Local.sSQL)
+						F.ODBC.Connection!common.Execute(V.Local.sSQL)
+						'Get Next Security_ID
+						F.ODBC.Connection!common.ExecuteAndReturn("Select Max(Security_ID) From Menu_Security;",V.Local.iSecurityID)
+						'Set Values for DataTable
+						F.Data.DataTable.SetSeries("dtCopyGroup","Security_ID",V.Local.iSecurityID.++,1)
+						F.Data.DataTable.SetValue("dtCopyGroup",-1,"Access_ID",V.Local.iGroupID,"Company",V.DataTable.dtCoCodes(V.Local.sSelect(V.Local.iCnt)).CoCode!FieldVal)
+						F.Data.DataTable.SaveToDB("dtCopyGroup","common","MENU_SECURITY","Security_ID*!*Access_ID*!*Company")
+					F.Intrinsic.Control.Next(V.Local.iCnt)
+				F.Intrinsic.Control.EndIf
+				F.Data.DataTable.Close("dtCopyGroup")
+	
+		F.Intrinsic.Control.EndSelect
+		
+		Gui.frmAdmin.lblStatus.Caption("Copying Complete....")
+		F.Intrinsic.UI.Sleep(2)
+		Gui.frmAdmin.lblStatus.Visible(False)
+
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.cmdCopy_Click.End
+
+Program.Sub.cmdSecCleanUp_Click.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.iRet.Declare
+		V.Local.sFilesCOMMON.Declare
+		V.Local.sFilesCompanyCode.Declare
+		
+		F.Intrinsic.UI.Msgbox("This process is going to remove User IDs that are not referenced in GLOBALCOMMON.USER_INFORMATION. Continue?","Security Cleanup",4,V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet,=,6)
+			Gui.frmAdmin.lblStatus.Caption("Sercurity Cleanup....")
+			Gui.frmAdmin.lblStatus.Visible(True)
+			
+			'Information
+			F.Intrinsic.Control.If(V.Caller.GSSVersion,>=,2019.1)
+				V.Local.sFilesCOMMON.Set("MENU_SECURITY!*!G*!*MENU_SECURITY_ASSOC!*!USER_ID*!*USER_CONFIG!*!USER_ID*!*USER_GROUPS!*!G*!*USER_INFORMATION!*!USER_ID*!*USER_OPTIONS_COM!*!USER_ID*!*USER_SECURITY!*!USER_ID*!*USER_SECURITY_PASS!*!USER_ID")
+			F.Intrinsic.Control.Else
+				V.Local.sFilesCOMMON.Set("MENU_SECURITY!*!G*!*MENU_SECURITY_ASSOC!*!USER_ID*!*USER_CONFIG!*!USER_ID*!*USER_GROUPS!*!G*!*USER_INFORMATION!*!USER_ID*!*USER_OPTIONS_COM!*!USER_ID*!*USER_SECURITY!*!USER_ID")
+			F.Intrinsic.Control.EndIf
+			V.Local.sFilesCompanyCode.Set("MENU_SECURITY!*!ACCESS_ID")
+			
+			'Backups
+			F.Data.DataTable.AddRow("dtCoCodes","CoCode",V.Caller.CompanyCode)
+			F.Intrinsic.Control.CallSub(SecCleanUpBackups,"InfoCOMMON",V.Local.sFilesCOMMON,"InfoCompanyCode",V.Local.sFilesCompanyCode)
+			
+			'Delete Data
+			F.Intrinsic.Control.CallSub(SecCleanUpDeletes,"InfoCOMMON",V.Local.sFilesCOMMON,"InfoCompanyCode",V.Local.sFilesCompanyCode,"Dir",V.Args.Dir)
+			F.Data.DataTable.DeleteRow("dtCoCodes",V.DataTable.dtCoCodes.RowCount--)
+			
+			Gui.frmAdmin.lblStatus.Visible(False)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.cmdSecCleanUp_Click.End
+
+Program.Sub.SecCleanUpBackups.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.sDir.Declare
+		V.Local.sDirCOMMON.Declare
+		V.Local.sDirCompanyCode.Declare
+		V.Local.sFilesCOMMON.Declare
+		V.Local.sFilesCompanyCode.Declare
+		V.Local.iCnt.Declare
+		V.Local.sFile.Declare
+		V.Local.sSourceFile.Declare
+		V.Local.sTargetFile.Declare
+		
+		'Create Backups Directory
+		F.Intrinsic.String.Build("{0}\DDF\ARC_5133_SecurityBackups",V.Caller.GlobalDir,V.Local.sDir)
+		F.Intrinsic.File.CreateDir(V.Local.sDir)
+		
+		'Create Backups Directory
+		F.Intrinsic.String.Build("{0}\DDF\ARC_5133_SecurityBackups\{1}_{2}",V.Caller.GlobalDir,V.Ambient.Date.FormatYYYYMMDD,V.Ambient.Time.FormatHhMmNn,V.Local.sDir)
+		F.Intrinsic.File.CreateDir(V.Local.sDir)
+		F.Intrinsic.Variable.AddRV("Dir",V.Local.sDir)
+		
+		'Create COMMON Directory
+		F.Intrinsic.String.Build("{0}\COMMON",V.Local.sDir,V.Local.sDirCOMMON)
+		F.Intrinsic.File.CreateDir(V.Local.sDirCOMMON)
+		
+		'COMMON Files
+		F.Intrinsic.String.Split(V.Args.InfoCOMMON,"*!*",V.Local.sFilesCOMMON)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sFilesCOMMON.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sFilesCOMMON(V.Local.iCnt),"!*!",V.Local.sFile)
+			F.Intrinsic.String.Build("{0}\DDF\COMMON\{1}.MKD",V.Caller.GlobalDir,V.Local.sFile(0),V.Local.sSourceFile)
+			F.Intrinsic.String.Build("{0}\{1}.MKD",V.Local.sDirCOMMON,V.Local.sFile(0),V.Local.sTargetFile)
+			F.Intrinsic.File.CopyFile(V.Local.sSourceFile,V.Local.sTargetFile)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		
+		'Create Company Code Directories
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtCoCodes.RowCount--,1)
+			'Create Company Code Directory
+			F.Intrinsic.String.Build("{0}\{1}",V.Local.sDir,V.DataTable.dtCoCodes(V.Local.iCnt).CoCode!FieldVal,V.Local.sDirCompanyCode)
+			F.Intrinsic.File.CreateDir(V.Local.sDirCompanyCode)
+			'Company Files
+			F.Intrinsic.String.Split(V.Args.InfoCompanyCode,"!*!",V.Local.sFile)
+			F.Intrinsic.String.Build("{0}\DDF\{1}\{2}.MKD",V.Caller.GlobalDir,V.DataTable.dtCoCodes(V.Local.iCnt).CoCode!FieldVal,V.Local.sFile(0),V.Local.sSourceFile)
+			F.Intrinsic.String.Build("{0}\{1}.MKD",V.Local.sDirCompanyCode,V.Local.sFile(0),V.Local.sTargetFile)
+			F.Intrinsic.File.CopyFile(V.Local.sSourceFile,V.Local.sTargetFile)
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.SecCleanUpBackups.End
+
+Program.Sub.SecCleanUpDeletes.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.iCnt.Declare
+		V.Local.sTablesAndFields.Declare
+		V.Local.sTable.Declare
+		V.Local.sField.Declare
+		V.Local.sDelete.Declare
+		V.Local.iUpdate.Declare
+		V.Local.sLog.Declare
+		V.Local.sLogFile.Declare
+		V.Local.sCompanyCode.Declare
+		
+		'Delete Data in COMMON
+		F.Intrinsic.String.Split(V.Args.InfoCOMMON,"*!*",V.Local.sTablesAndFields)
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sTablesAndFields.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sTablesAndFields(V.Local.iCnt),"!*!",V.Local.sTable)
+			V.Local.sField.Set(V.Local.sTable(1))
+			V.Local.sTable.Set(V.Local.sTable(0))
+			F.Intrinsic.Control.If(V.Local.sField,<>,"G")
+				F.Intrinsic.String.Build("DELETE FROM {0} WHERE {1} NOT IN (SELECT USER_ID FROM USER_INFORMATION);",V.Local.sTable,V.Local.sField,V.Local.sDelete)
+				F.ODBC.Connection!common.Execute(V.Local.sDelete)
+				F.ODBC.Connection!common.ExecuteAndReturn("SELECT @@ROWCOUNT AS DELETED;",V.Local.iUpdate)
+				F.Intrinsic.Control.If(V.Local.iCnt,=,1)
+					F.Intrinsic.String.Build("COMMON Tables{0}{1}.{2} -- REMOVED: {3} Record(s)",V.Ambient.NewLine,V.Local.sTable,V.Local.sField,V.Local.iUpdate,V.Local.sLog)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0}{1}{2}.{3} -- REMOVED: {4} Record(s)",V.Local.sLog,V.Ambient.NewLine,V.Local.sTable,V.Local.sField,V.Local.iUpdate,V.Local.sLog)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		
+		'Delete Data in Company Code
+		F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtCoCodes.RowCount--,1)
+			V.Local.sCompanyCode.Set(V.DataTable.dtCoCodes(V.Local.iCnt).CoCode!FieldVal)
+			F.Global.General.OverrideCompany(V.Local.sCompanyCode)
+			F.ODBC.Connection!conCoCode.OpenCompanyConnection(300)
+			F.Intrinsic.String.Split(V.Args.InfoCompanyCode,"*!*",V.Local.sTablesAndFields)
+			F.Intrinsic.String.Split(V.Local.sTablesAndFields(0),"!*!",V.Local.sTable)
+			V.Local.sField.Set(V.Local.sTable(1))
+			V.Local.sTable.Set(V.Local.sTable(0))
+			F.Intrinsic.String.Build("DELETE FROM {0} WHERE {1} NOT IN (SELECT USER_ID FROM {2}.USER_INFORMATION);",V.Local.sTable,V.Local.sField,V.Global.sCommonDbName,V.Local.sDelete)
+			F.ODBC.Connection!conCoCode.Execute(V.Local.sDelete)
+			F.ODBC.Connection!conCoCode.ExecuteAndReturn("Select @@RowCount As Deleted;",V.Local.iUpdate)
+			F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+				F.Intrinsic.String.Build("{0}{1}{1}Company Code Tables{1}{2} - {3}.{4} -- REMOVED: {5} Record(s)",V.Local.sLog,V.Ambient.NewLine,V.Local.sCompanyCode,V.Local.sTable,V.Local.sField,V.Local.iUpdate,V.Local.sLog)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0}{1}{2} - {3}.{4} -- REMOVED: {5} Record(s)",V.Local.sLog,V.Ambient.NewLine,V.Local.sCompanyCode,V.Local.sTable,V.Local.sField,V.Local.iUpdate,V.Local.sLog)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Connection!conCoCode.Close
+		F.Intrinsic.Control.Next(V.Local.iCnt)
+		
+		'Log File
+		F.Intrinsic.String.Build("{0}\Security_Cleanup_Log.txt",V.Args.Dir,V.Local.sLogFile)
+		F.Intrinsic.File.String2File(V.Local.sLogFile,V.Local.sLog)
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.SecCleanUpDeletes.End
+
+Program.Sub.OpenViewBackups.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.sDir.Declare
+		
+		'Open Backups Directory
+		F.Intrinsic.String.Build("{0}\DDF\ARC_5133_SecurityBackups",V.Caller.GlobalDir,V.Local.sDir)
+		F.Intrinsic.File.CreateDir(V.Local.sDir)
+		
+		F.Intrinsic.Task.ShellExec(0,"OPEN",V.Local.sDir,"","",1)
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+	
+Program.Sub.OpenViewBackups.End
+
+Program.Sub.Serialize.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+		
+		V.Local.sSerialize.Declare()
+	
+		GUI.frmSec.GsGCSec.Serialize("gvSec", V.Local.sSerialize)
+		F.Global.Registry.AddValue(V.Caller.User, V.Caller.CompanyCode, "gvSec", 5513, 1000, False, "Serialize", False, 0, -999.0, 1/1/1980, 12:00:00 AM, V.Local.sSerialize)
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+	F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		V.Local.sSerialize.Declare()
+		
+		' Delete any previous registry records.
+		F.Global.Registry.ReadValue(V.Caller.User, V.Caller.CompanyCode, "gvSec", 5133, 0, 5, "", V.Local.sSerialize)
+		F.Intrinsic.Control.If(V.Local.sSerialize.Trim, <>, "")
+			F.ODBC.Connection!common.Execute("DELETE FROM gs_registry WHERE reg_id = 4409 AND seq < 1000;")
+		F.Intrinsic.Control.EndIf
+	
+		F.Global.Registry.ReadValue(V.Caller.User, V.Caller.CompanyCode, "gvSec", 5133, 1000, 6, "", V.Local.sSerialize)
+		F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+			Gui.frmSec.GsGCSec.Deserialize(V.Local.sSerialize)
+		F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.Deserialize.End
+Program.Sub.ddlView_SelectedIndexChanged.Start
+		F.Intrinsic.Control.Try
+	
+		V.Local.sError.Declare
+	
+		F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"OCTSRS.NET.EXE",5133,1000,False,V.Screen.frmSec!ddlView.Text,False,0,-999.0,1/1/1980,12:00:00 AM,"")
+		F.Intrinsic.Control.CallSub(LoadSecurityDT)
+	
+	F.Intrinsic.Control.Catch
+	
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+		
+	F.Intrinsic.Control.EndTry
+Program.Sub.ddlView_SelectedIndexChanged.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$ttrojacek$}$20230706154947113$}$1REoGSe/f0Yb3cFf+NC/HUSyrHyqoDF3I0V4UnurFioXyXMYTNdeUE4EDZREEpP5YjTZzR9yTz+LZA46JZOPCw==
+Program.Sub.Comments.End
